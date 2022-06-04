@@ -51,6 +51,8 @@ section h2 {
     background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
     opacity: 1;
     z-index: calc(8 - var(--z));
+    border-top-color: #710c19;
+    border-left-color: #710c19;
     animation: animate2 2s var(--duration) ease forwards;
 }
 
@@ -63,6 +65,8 @@ section h2 {
         background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
         opacity: 1;
         transform: translateZ(0);
+        border-top-color: #710c19;
+        border-left-color: #710c19;
     }
 }
 
