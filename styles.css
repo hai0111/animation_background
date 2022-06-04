@@ -38,7 +38,20 @@ section h2 {
 .blocks {
     width: 5vw;
     height: 10vh;
-    animation: animate 2s ease forwards;
+    animation: animate 2s var(--duration) ease forwards;
+    z-index: var(--z);
+}
+
+.banner.active .blocks {
+    background-image: url("./image.png");
+    background-size: 100vw auto;
+    background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
+    opacity: 1;
+    border-top: 1px solid #710c19;
+    border-left: 1px solid #710c19;
+    transform: translateZ(0);
+    z-index: calc(8 - var(--z));
+    animation: animate2 2s var(--duration) ease forwards;
 }
 
 @keyframes animate {
@@ -55,5 +68,13 @@ section h2 {
         border-top: 1px solid #710c19;
         border-left: 1px solid #710c19;
         transform: translateZ(0);
+    }
+}
+
+
+@keyframes animate2 {
+    100% {
+        opacity: 0;
+        transform: translateZ(500px);
     }
 }
