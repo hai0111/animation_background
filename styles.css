@@ -52,6 +52,8 @@ section h2 {
         background-size: 100vw auto;
         background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
         opacity: 1;
+        border-top: 1px solid #710c19;
+        border-left: 1px solid #710c19;
         transform: translateZ(0);
     }
 }
