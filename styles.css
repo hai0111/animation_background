@@ -32,11 +32,12 @@ section h2 {
     flex-wrap: wrap;
     transform-style: preserve-3d;
     perspective: 500px;
+    align-content: flex-start;
 }
 
 .blocks {
     width: 5vw;
-    height: 5vh;
+    height: 10vh;
     animation: animate 2s ease forwards;
 }
 
@@ -49,7 +50,7 @@ section h2 {
     100% {
         background-image: url("./image.png");
         background-size: 100vw auto;
-        background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 5vh);
+        background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
         opacity: 1;
         transform: translateZ(0);
     }
