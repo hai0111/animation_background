@@ -1,80 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Righteous", sans-serif;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Righteous', sans-serif;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #710c19;
+	background-color: #710c19;
 }
 
 section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
 }
 
 section h2 {
-    margin: auto;
-    font-size: 10vw;
-    color: #fff;
+	margin: auto;
+	font-size: 10vw;
+	color: #fff;
 }
 
 .banner {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    transform-style: preserve-3d;
-    perspective: 500px;
-    align-content: flex-start;
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	perspective: 500px;
 }
 
 .blocks {
-    width: 5vw;
-    height: 10vh;
-    animation: animate 2s var(--duration) ease forwards;
-    z-index: var(--z);
-    background-image: url("./image.png");
-    opacity: 0;
+	width: 5vw;
+	height: 10vh;
+	animation: animate 2s var(--duration) ease forwards;
+	z-index: var(--z);
+	background-image: url('./image.png');
+	opacity: 0;
 }
 
 .banner.active .blocks {
-    background-image: url("./image.png");
-    background-size: 100vw auto;
-    background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
-    opacity: 1;
-    transform: translateZ(0);
-    border-top: 1px solid #710c19;
-    border-left: 1px solid #710c19;
-    z-index: calc(8 - var(--z));
-    animation: animate2 2s var(--duration) ease forwards;
+	background-image: url('./image.png');
+	background-size: 100vw auto;
+	background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom
+		calc(var(--y) * 10vh);
+	opacity: 1;
+	transform: translateZ(0);
+	border-top: 1px solid #710c19;
+	border-left: 1px solid #710c19;
+	z-index: calc(8 - var(--z));
+	animation: animate2 2s var(--duration) ease forwards;
 }
 
 @keyframes animate {
-    0% {
-        transform: translateZ(500px);
-    }
+	0% {
+		transform: translateZ(500px);
+	}
 
-    100% {
-        background-size: 100vw auto;
-        background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom calc(var(--y) * 10vh);
-        opacity: 1;
-        border-top: 1px solid #710c19;
-        border-left: 1px solid #710c19;
-        transform: translateZ(0);
-    }
+	100% {
+		background-size: 100vw auto;
+		background-position: right calc(calc(var(--x) * 5vw) + 4vw) bottom
+			calc(var(--y) * 10vh);
+		opacity: 1;
+		border-top: 1px solid #710c19;
+		border-left: 1px solid #710c19;
+		transform: translateZ(0);
+	}
 }
 
-
 @keyframes animate2 {
-    100% {
-        opacity: 0;
-        transform: translateZ(500px);
-    }
+	100% {
+		opacity: 0;
+		transform: translateZ(500px);
+	}
 }
